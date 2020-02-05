@@ -1,2 +1,2 @@
-# programacion
+# Programación
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PenelopeG29/programacion/master)
