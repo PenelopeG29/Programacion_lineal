@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+\title{Método Simplex}
+\author{Penélope W. Gutiérrez Silva}
+
+\begin{document}
+\maketitle
+
+\section{Introducción:}
+
+El método simplex es un algoritmo para resolver problemas de programación lineal. Fue desarrollado por George Dantzing en 1947.
+
+\section{Ejemplo:}
+
+Ilustraremos la aplicación del método simplex con un ejemplo.
+
+Resuelve el siguiente problema:
+ 
+      \begin{equation*}
+ \begin{aligned}
+\text{Maximizar} \quad & 2x_{1}+x_{2}\\
+\text{sujeto a} \quad &
+  \begin{aligned}
+   x_{1}-x_{2} &\leq 2\\
+   -2x_{1}+x_{2} &\leq 2\\
+   3x_{1}+4x_{2} &\leq 12\\
+   x_{1}+x_{2} &\geq 1\\
+    x_{1},x_{2} &\geq 0
+  \end{aligned}
+\end{aligned}
+\end{equation*}
+ 
+Como una de las desigualdades aparecen las variables  del lado izquierdo de un símbolo $\leq$, multiplicamos ambos miembros de esa desigualdad por $-1$.
+
+     \begin{equation*}
+ \begin{aligned}
+\text{Maximizar} \quad & 2x_{1}+x_{2}\\
+\text{sujeto a} \quad &
+  \begin{aligned}
+   x_{1}-x_{2} &\leq 2\\
+   -2x_{1}+x_{2} &\leq 2\\
+   3x_{1}+4x_{2} &\leq 12\\
+   -x_{1}-x_{2} &\leq -1\\
+    x_{1},x_{2} &\geq 0
+  \end{aligned}
+\end{aligned}
+\end{equation*}
+
+Para obtener la forma simplex, añadimos una variable de holgura por cada desigualdad de forma que se conviertan en igualdades.
+
+\begin{equation*}
+ \begin{aligned}
+\text{Maximizar} \quad & 2x_{1}+x_{2}\\
+\text{sujeto a} \quad &
+  \begin{aligned}
+   x_{1}-x_{2}+X_{3} &= 2\\
+   -2x_{1}+x_{2}+X_{4}&= 2\\
+   3x_{1}+4x_{2}+X_{5}&= 12\\
+   -x_{1}-x_{2}+X_{6}&= -1\\
+   x_{1},x_{2},X_{3},X_{4},X_{5},X_{6} &\geq 0
+  \end{aligned}
+\end{aligned}
+\end{equation*}
+
+
+A continuación obtenemos un \emph{tablero simplex} despejando las variables de holgura.
+
+
+
+\end{document}
